@@ -1,0 +1,22 @@
+{
+  "name": "sas",
+  "version": "1.0.0",
+  "description": "Student Attendance System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sujitpatil276/sas.git"
+  },
+  "author": "sujitpatil276",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sujitpatil276/sas/issues"
+  },
+  "homepage": "https://github.com/sujitpatil276/sas#readme",
+  "dependencies": {
+    "mongoose": "^8.2.0"
+  }
+}
