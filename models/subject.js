@@ -6,7 +6,24 @@ const subjectSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true,
-        }
+        },
+        year: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "year",
+        },
+        branch: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "department",
+        },
+        assignments: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: "assignment",
+            }
+        ]
     },
     { timestamps: true }
 )

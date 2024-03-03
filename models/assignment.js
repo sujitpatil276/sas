@@ -1,24 +1,25 @@
 const mongoose = require("mongoose")
 
-const studentSchema = new mongoose.Schema(
+const assignmentSchema = new mongoose.Schema(
     {
-        firstname: {
-            type: String,
-            required: true,
-            trim: true,
-        },
-        lastname: {
-            type: String,
-            required: true,
-            trim: true,
-        },
-        rollNo: {
+        number: {
             type: Number,
             required: true,
             trim: true,
         },
+        title: {
+            type: String,
+            required: true,
+            trim: true,
+        },
+        subject: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "subject",
+        },
+
     },
     { timestamps: true }
 )
 
-module.exports = mongoose.model("student", studentSchema)
+module.exports = mongoose.model("assignment", assignmentSchema)

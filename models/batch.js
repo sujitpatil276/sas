@@ -6,7 +6,14 @@ const batchSchema = new mongoose.Schema(
             type: String,
             required: true,
             trim: true,
-        }
+        },
+        students: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: "student",
+            }
+        ]
     },
     { timestamps: true }
 )

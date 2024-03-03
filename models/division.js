@@ -6,7 +6,14 @@ const divisionSchema = new mongoose.Schema(
             type: Number,
             required: true,
             trim: true,
-        }
+        },
+        batches: [
+            {
+                type: mongoose.Schema.Types.ObjectId,
+                required: true,
+                ref: "batch",
+            },
+        ],
     },
     { timestamps: true }
 )
