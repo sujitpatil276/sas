@@ -8,14 +8,19 @@ const subjectSchema = new mongoose.Schema(
             trim: true,
         },
         year: {
-            type: mongoose.Schema.Types.ObjectId,
+            type: String,
             required: true,
-            ref: "year",
+            trim: true,
         },
         branch: {
-            type: mongoose.Schema.Types.ObjectId,
+            type: String,
             required: true,
-            ref: "department",
+            trim: true,
+        },
+        sem: {
+            type: Number,
+            required: true,
+            trim: true,
         },
         assignments: [
             {

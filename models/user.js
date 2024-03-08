@@ -5,7 +5,12 @@ const mongoose = require("mongoose")
 const userSchema = new mongoose.Schema(
   {
     // Define the username field with type String, required, and trimmed
-    userName: {
+    firstname: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    lastname: {
       type: String,
       required: true,
       trim: true,
@@ -16,7 +21,11 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-
+    department: {
+      type: String,
+      required: true,
+      trim: true,
+    },
     // Define the password field with type String and required
     password: {
       type: String,

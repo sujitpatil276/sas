@@ -12,12 +12,6 @@ const assignmentSchema = new mongoose.Schema(
             required: true,
             trim: true,
         },
-        subject: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "subject",
-        },
-
     },
     { timestamps: true }
 )
