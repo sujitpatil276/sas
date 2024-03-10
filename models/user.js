@@ -15,13 +15,13 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    department: {
+      type: String,
+      enum: ["IT", "CE", "E&TC", "Admin"],
+      required: true,
+    },
     // Define the email field with type String, required, and trimmed
     email: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    department: {
       type: String,
       required: true,
       trim: true,

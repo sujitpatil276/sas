@@ -4,8 +4,8 @@ const departmentSchema = new mongoose.Schema(
     {
         name: {
             type: String,
+            enum: ["IT", "CE", "E&TC", "Admin"],
             required: true,
-            trim: true,
         },
         divisions: [
             {
